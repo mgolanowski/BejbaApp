@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    background-attachment: scroll;
+    padding-top: 100px;
+  }
+}
