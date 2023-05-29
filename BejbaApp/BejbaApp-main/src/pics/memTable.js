@@ -44,15 +44,6 @@ const memTable = [
   },
  
 ];
-const initState = {
-  numberOfLikes: {},
-  numberOfDislikes: 3,
-};
-
-memTable.forEach((mem) => {
-  initState.numberOfLikes[mem.id] = mem.upvotes;
-});
-
 
 
 export default memTable;
