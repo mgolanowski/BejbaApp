@@ -1,23 +1,21 @@
 import React from "react";
 import "./Like.css";
+import { incrementDislikes } from "../store/actions";
 import { useSelector, useDispatch } from "react-redux";
 
-export default function Dislike({ handleDecrease }) {
-
+export default function Dislike({ meme }) {
   const dispatch = useDispatch();
-  const numberOfDislikes = useSelector((state) => state.numberOfDislikes);
-  
 
-   const decrementHandler = () => {
-    const decrementtAction = { type: "COUNT_DISLIKES" };
-    dispatch(decrementtAction);
+  const decrementHandler = () => {
+    const decrementAction = incrementDislikes(meme.id);
+    dispatch(decrementAction);
   };
   return (
     <>
-      <button className="downvote" onClick={decrementHandler }>
+      <button className="downvote" onClick={decrementHandler}>
         <p>Dislike</p>
         <i className="fas fa-thumbs-down"></i>
-        <span>{numberOfDislikes}</span>
+        <span>{meme.downvotes}</span>
       </button>
     </>
   );

@@ -6,16 +6,16 @@ import { useState } from "react";
 
 
 export default function Mems({ item }) {
-  const [likes, setLikes] = useState(item.likes);
-  const [dislikes, setDislikes] = useState(item.dislikes);
+  // const [likes, setLikes] = useState(item.likes);
+  // const [dislikes, setDislikes] = useState(item.dislikes);
 
-  const handleGrow = () => {
-    setLikes((prevLikes) => prevLikes + 1);
-  };
+  // const handleGrow = () => {
+  //   setLikes((prevLikes) => prevLikes + 1);
+  // };
 
-  const handleDecrease = () => {
-    setDislikes((prevDislikes) => prevDislikes + 1);
-  };
+  // const handleDecrease = () => {
+  //   setDislikes((prevDislikes) => prevDislikes + 1);
+  // };
 
   return (
     <>
@@ -26,8 +26,8 @@ export default function Mems({ item }) {
         </div>
         <h3>{item.title}</h3>
         <div className="votes">
-          <Like grow={likes} handleGrow={handleGrow} />
-          <Dislike decrease={dislikes} handleDecrease={handleDecrease} />
+          <Like meme ={item}/>
+          <Dislike meme ={item}/>
         </div>
       </div>
     </>

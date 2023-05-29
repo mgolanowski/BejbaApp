@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Error404 () {
     return (
-    <div>
-        <h1> Ta strona nie iestnieje, jak się tu znalazłeś?</h1>
-        <img src ="https://blog.hubspot.com/hs-fs/hubfs/Google%20Drive%20Integration/Bonanza%20Update%20404%20Error%20Page%20(heavy%2c%20Update)-Jul-19-2021-07-05-04-37-PM.png?width=650&name=Bonanza%20Update%20404%20Error%20Page%20(heavy%2c%20Update)-Jul-19-2021-07-05-04-37-PM.png"/>
+    <div className="error">
+        <h1> Its Kajna Krejza Bejba bo ta strona nie iestnieje, jak się tu znalazłeś?</h1>
+        <img src ="https://i.pinimg.com/originals/a5/4b/f8/a54bf8e8bd76d92be03bbecae09c1b69.png" width="70%" height="80%" />
     </div>
     );
 }

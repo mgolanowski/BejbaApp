@@ -5,17 +5,13 @@ import Mems from "./Mems";
 import { useSelector } from "react-redux";
 
 export default function MainPage({ hot, regular }) {
-  const numberOfLikes = useSelector((state) => state.numberOfLikes);
-  const numberOfDislikes = useSelector((state) => state.numberOfDislikes);
-  
+  const memes = useSelector((state) => state.mems);
 
-
-
-  const filteredMems = memTable.filter(() => {
-    if (hot && numberOfLikes - numberOfDislikes > 5) {
+  const filteredMems = memes.filter((meme) => {
+    if (hot && meme.upvotes - meme.downvotes > 5) {
       return true;
     }
-    if (regular && numberOfLikes - numberOfDislikes <= 5) {
+    if (regular && meme.upvotes - meme.downvotes <= 5) {
       return true;
     }
     if (!hot && !regular) {
@@ -32,5 +28,5 @@ export default function MainPage({ hot, regular }) {
         </div>
       ))}
     </section>
-  )
-  }
+  );
+}

@@ -1,13 +1,11 @@
-
-
-
+const storedLikes = localStorage.getItem("likes");
 const initialState = {
-  mems: [
+  mems: storedLikes ? JSON.parse(storedLikes) :  [
     {
       id: 1,
       img: "bejba1.jpg",
-      likes: 6,
-      dislikes: 0,
+      upvotes: 6,
+      downvotes: 0,
     },
     {
       id: 2,
@@ -45,9 +43,7 @@ const initialState = {
       upvotes: 7,
       downvotes: 1,
     },
-    
   ],
-  
 };
 
 export const likesReducer = (state = initialState, action) => {
@@ -62,7 +58,6 @@ export const likesReducer = (state = initialState, action) => {
           }
           return mem;
         }),
-     
       };
     }
     case "INCREMENT_DISLIKES": {
@@ -71,11 +66,10 @@ export const likesReducer = (state = initialState, action) => {
         ...state,
         mems: state.mems.map((mem) => {
           if (mem.id === memId) {
-            return { ...mem, downvotes: mem.downvotes+ 1 };
+            return { ...mem, downvotes: mem.downvotes + 1 };
           }
           return mem;
         }),
-       
       };
     }
     default: {

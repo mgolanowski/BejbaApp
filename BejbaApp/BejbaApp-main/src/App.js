@@ -7,6 +7,7 @@ import Regular from './pages/Regular';
 import HotContainer from "./pages/Hot";
 import StartPage from "./pages/Start";
 import MainPage from "./components/MainPage";
+import Error404 from "./pages/Error404";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="" element={<StartPage />} />
           <Route path="/regular" element={<Regular />} />
           <Route path="/hot" element={<HotContainer />} />
+          <Route path="/*" element={<Error404 />} />
         </Routes>
       </main>
 

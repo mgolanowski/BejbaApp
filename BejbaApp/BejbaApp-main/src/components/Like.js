@@ -1,18 +1,13 @@
 import React from "react";
 import "./Like.css";
 import { useSelector, useDispatch } from "react-redux";
-import { incrementLikes } from "../store/actions"
+import { incrementLikes } from "../store/actions";
 
-
-export default function Like({ memId }) {
+export default function Like({ meme }) {
   const dispatch = useDispatch();
-  const mems = useSelector((state) => state.mems);
-
-  const mem = mems.find((mem) => mem.id === memId);
- 
 
   const incrementHandler = () => {
-    dispatch(incrementLikes (memId)); 
+    dispatch(incrementLikes(meme.id));
   };
 
   return (
@@ -20,7 +15,7 @@ export default function Like({ memId }) {
       <button className="upvote" onClick={incrementHandler}>
         <p>Like</p>
         <i className="fas fa-thumbs-up"></i>
-        <span>{mems.upvotes}</span>
+        <span>{meme.upvotes}</span>
       </button>
     </>
   );

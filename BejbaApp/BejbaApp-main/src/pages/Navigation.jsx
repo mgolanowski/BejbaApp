@@ -11,7 +11,7 @@ return (
         <li><NavLink to = ""> Start</NavLink></li>
         <li><NavLink to = "/hot"> Hot</NavLink></li>
         <li><NavLink to = "/regular"> Regular</NavLink></li>
-        {/* <li><NavLink to = "*"> Error Page</NavLink></li> */}
+        <li><NavLink to = "*"> Error Page</NavLink></li>
     </ul>
     );
 }

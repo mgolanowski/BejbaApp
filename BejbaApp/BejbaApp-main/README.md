@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Project goals:
+
+this is mems app with likes adn dislikes option.
+If the resluts of upvotes - downvotes > 5 then mem should move to Hot page if not should be visible on Regular page.
+All memes should be visible as well on Main Page
