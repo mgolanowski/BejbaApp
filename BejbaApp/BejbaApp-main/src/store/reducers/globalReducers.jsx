@@ -1,6 +1,6 @@
-const storedLikes = localStorage.getItem("likes");
+
 const initialState = {
-  mems: storedLikes ? JSON.parse(storedLikes) :  [
+  mems: [
     {
       id: 1,
       img: "bejba1.jpg",
