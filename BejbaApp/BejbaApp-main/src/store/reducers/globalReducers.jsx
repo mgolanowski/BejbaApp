@@ -27,7 +27,7 @@ const initialState = {
     },
     {
       id: 5,
-      img: "bejba5.jpg",
+      img: "bejba12.jpg",
       upvotes: 4,
       downvotes: 1,
     },

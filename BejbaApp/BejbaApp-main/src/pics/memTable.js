@@ -2,7 +2,7 @@
 const memTable = [
   {
     id: 1,
-    img: "bejba1.jpg",
+    img: "bejba12.jpg",
     upvotes: 6,
     downvotes: 0,
   },
@@ -26,7 +26,7 @@ const memTable = [
   },
   {
     id: 5,
-    img: "bejba5.jpg",
+    img: "bejba1.jpg",
     upvotes: 4,
     downvotes: 1,
   },

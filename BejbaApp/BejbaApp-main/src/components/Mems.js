@@ -6,16 +6,6 @@ import { useState } from "react";
 
 
 export default function Mems({ item }) {
-  // const [likes, setLikes] = useState(item.likes);
-  // const [dislikes, setDislikes] = useState(item.dislikes);
-
-  // const handleGrow = () => {
-  //   setLikes((prevLikes) => prevLikes + 1);
-  // };
-
-  // const handleDecrease = () => {
-  //   setDislikes((prevDislikes) => prevDislikes + 1);
-  // };
 
   return (
     <>
